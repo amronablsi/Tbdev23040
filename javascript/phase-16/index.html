@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire contact html</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+   <h1>Vos coordonnés:</h1> 
+   <p>*Ces zones sont obligatoire pour envoyer le formulire.</p>
+   <form action="traitement_formulaire.php" method="POST">
+   <label for="sociéte">Sociéte:</label>
+   <input type="text" id="societe" name="societe" required minlength="1">*<br>
+   <span class="error-message" id="societe-error">Veuillez fournir le nom de la société.</span>
+   <br>
+   <label for="persone">Persone à contacter:</label>
+   <input type="text" id="persone" name="persone" required minlength="1">*<br>
+   <span class="error-message" id="personne-error">Veuillez fournir le nom de la personne à contacter.</span>
+   <br>
+   <label for="Adresse">Adresse de l'enptrepris:</label>
+   <input type="text" id="Adresse" name="Adresse"><br>
+   <br>
+   <label for="codepostal">Code postal:</label>
+   <input type="text" id="codepostal" name="codepostal" pattern="[0-9]{5}" required>*<br>
+   <span class="error-message" id="codepostal-error">Le code postal doit comporter 5 chiffres.</span>
+   <br>
+   <label for="Ville">Ville:</label>
+   <input type="text" id="Ville" name="Ville" required minlength="1">*<br>
+   <span class="error-message" id="ville-error">Veuillez fournir le nom de la ville.</span>
+   <br>
+   <label for="E-mail">E-mail:</label>
+   <input type="email" id="eamil" name="eamil" required>*<br>
+   <span class="error-message" id="email-error">Veuillez fournir une adresse email valide.</span>
+   <br>
+   <label for="téléphone">Téléphone:</label>
+   <input type="text" id="téléphone" name="téléphone"><br>
+   <br>
+   <label for="environnement">Sélectionnez l'environnement techinque du projrt:</label>
+   <select id="environnement" name="environnement">
+    <option value="Choisissez" disabled selected>Choisissez</option>
+    <option value="Access">Access</option>
+    <option value="Java">Java</option>
+    <option value="Delphi">Delphi</option>
+    <option value="Windev">Windev</option>
+    <option value="VisualBasic">Visual Basic</option>
+    <option value="PowerBulider">Power Bulider</option>
+    <option value="Internet">Internet</option>
+    <option value="WindowsNT">Windows NT</option>
+    <option value="Unix">Unix</option>
+    <option value="SQLServer">SQL Server</option>
+    <option value="Oracle">Oracle</option>
+    <option value="Autres..">Autres..</option>
+   </select><br>
+   <span class="error-message" id="environnement-error">Veuillez sélectionner un environnement technique.</span>
+     <br>   
+   <br>
+   <label for="commentaires">Commentaires:</label>
+   <textarea id="commentaires" name="commentaires" rows="4" cols="50" placeholder="Vous pouvez ajouter des informations manuelles ici..."></textarea><br>
+   <br>
+   <input type="submit" value="Envoyer">
+   <input type="submit" value="Effacer">
+   </form>
+   <script src="index.js">
+
+   </script>
+</body>
+</html>

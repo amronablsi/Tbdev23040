@@ -1,0 +1,31 @@
+.error-message {
+    color: red;
+    display: none;
+}
+.p {
+    background-color: rgb(44, 25, 25);
+}
+input{
+    span{display: none;}
+    input:required, textarea::required{
+        background: url(asterisk.png)98% center no-repeat;
+    }
+    input:focus:invalid, textarea:focus::invalid{
+        border-color: #FF0000;
+        background-image: none;
+        
+    }
+    input::focus::invalid + span, textarea::focus::invalid +span{
+        display: block;
+        color: #FF0000;
+    }
+    input::focus:valid, textarea::focus::valid{
+        border-color: #56c93f;
+       
+    }
+     input::valid,textarea::valid{
+        background-image: none;
+     }
+
+
+}
