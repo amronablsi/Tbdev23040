@@ -1,10 +1,22 @@
 // Demander le nom et le prénom de l'utilisateur
-var nom = "ALNABLSI"
-var prénom = "Amro";
-console.log(prénom);
-console.log(nom);
-// Afficher les informations sur l'utilisateur via une alerte
-alert("Nom:" +nom +"Prénom" +prénom);
+function demanderNom() {
+    var nom = prompt("Quel est votre nom ?");
+    return nom;
+}
+
+// Fonction pour demander le prénom de l'utilisateur via une boîte de dialogue
+function demanderPrenom() {
+    var prenom = prompt("Quel est votre prénom ?");
+    return prenom;
+}
+
+// Appel des fonctions pour obtenir le nom et le prénom
+var nomUtilisateur = demanderNom();
+var prenomUtilisateur = demanderPrenom();
+
+// Afficher les informations via une alerte
+var message = "Nom: " + nomUtilisateur + "\nPrénom: " + prenomUtilisateur;
+alert(message);
 
 // Calculer le produit de deux nombres entrés par l'utilisateur
 var a = 15;

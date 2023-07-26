@@ -1,25 +1,26 @@
-function validateForm() {
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
+ // Function to validate the form
+ function validateForm() {
+  // Get the form inputs
+  var userName = document.getElementById("user-name").value.trim();
+  var userFirstName = document.getElementById("user-firstname").value.trim();
+  var gender = document.querySelector('input[name="gender"]:checked');
+  var dateOfBirth = document.getElementById("date").value.trim();
+  var userCode = document.getElementById("user-code").value.trim();
+  var address = document.getElementById("Adresse").value.trim();
+  var city = document.getElementById("city").value.trim();
+  var email = document.getElementById("emailinput").value.trim();
+  var sujet = document.getElementById("sujet").value.trim();
+  var message = document.getElementById("message").value.trim();
+  var cgu = document.getElementById("cgu").checked;
 
-  // Expression régulière pour vérifier que le nom contient uniquement des lettres et des espaces
-  var nameRegex = /^[A-Za-z\s]+$/;
-
-  // Expression régulière pour vérifier que l'email est valide
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!nameRegex.test(name)) {
-    alert("Veuillez entrer un nom valide (lettres uniquement).");
-    return false;
+  // Check if required fields are empty
+  if (userName === "" || userFirstName === "" || !gender || dateOfBirth === "" || userCode === "" || address === "" || city === "" || email === "" || sujet === "choiser" || message === "" || !cgu) {
+      alert("Veuillez remplir tous les champs obligatoires (marqués par *)");
+      return false; // Prevent form submission
   }
 
-  if (!emailRegex.test(email)) {
-    alert("Veuillez entrer une adresse email valide.");
-    return false;
-  }
+  // You can add more specific validation for each field if needed.
 
-  // Vous pouvez ajouter d'autres validations ici pour le message, si nécessaire.
-
-  return true; // Soumission du formulaire si tout est valide.
+  // Form is valid, allow submission
+  return true;
 }
