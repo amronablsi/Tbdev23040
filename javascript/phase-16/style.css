@@ -1,31 +1,52 @@
-.error-message {
+body,
+html {
+    font-size: 100%;
+}
+
+
+.formulaire label {
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.formu input {
+    display: flex;
+    margin-bottom: 20px;
+    width: 40%;
+    border-style: inset;
+}
+
+.buton input {
+    display: flex;
+    align-items: center;
+}
+
+.formulaire select[name="projet"] {
+    font-size: 14px;
+    padding: 1px;
+    width: auto;
+    max-width: 100px;
+    height: auto;
+    max-height: 40px;
+
+}
+p{
+    color: brown;
+}
+
+.formulaire textarea {
+    height: 50px;
+    width: 200px;
+    border-style: inset;
+}
+
+.bouton {
+    display: flex;
+}
+
+.asterisk {
     color: red;
-    display: none;
 }
-.p {
-    color: #f03737;
-}
-input{
-    span{display: none;}
-    input:required, textarea::required{
-        background: url(asterisk.png)98% center no-repeat;
-    }
-    input:focus:invalid, textarea:focus::invalid{
-        border-color: #FF0000;
-        background-image: none;
-        
-    }
-    input::focus::invalid + span, textarea::focus::invalid +span{
-        display: block;
-        color: #FF0000;
-    }
-    input::focus:valid, textarea::focus::valid{
-        border-color: #56c93f;
-       
-    }
-     input::valid,textarea::valid{
-        background-image: none;
-     }
 
-
-}
