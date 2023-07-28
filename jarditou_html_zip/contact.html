@@ -25,23 +25,24 @@
           <form action="http://bienvu.net/script.php" method="post" onsubmit="return validateForm()">  
             <fieldset>
             <legend>Vos coordonnées</legend>
-            <label for="user-name">Votre nom*:</label>
-            <input type="text" id="user-name"><br>
-            <label for="user-name">Votre prénom*</label>
-            <input type="text" id="user-name"><br>
+            <label for="nom">Votre nom*:</label>
+            <input type="text" id="nom"><br>
+            <span class="error-message" id="societe-error"></span>
+            <label for="prénom">Votre prénom*</label>
+            <input type="text" id="prénom"><br>
             <br>
             <p>Sexe*</p>
-            <label><input type="radio" name="gender" value="female">Féminin</label>
+            <label><input type="radio" name="gender" value="Féminin">Féminin</label>
             <label>Masculin</label>
-            <input type="radio" name="gender" value="male"><br>
+            <input type="radio" name="gender" value="Masculin"><br>
             <label for="date">Date de naissanve*</label>
             <input type="date" name="ddn" id="date"><br>
-            <label for="user-code">Code postal*:</label>
-            <input type="text" id="user-code"><br>
+            <label for="codepostal">Code postal*:</label>
+            <input type="text" id="codepostal"><br>
             <label for="Adresse">Adresse:</label>
             <input type="text" id="Adresse"><br>
-            <label for="city">Ville:</label>
-            <input type="text" id="city"><br>
+            <label for="Ville">Ville:</label>
+            <input type="text" id="Ville"><br>
             <label for="emailinput">Email*:</label>
             <input type="text" name="eamil" id="emailinput" value="dave.loper@afpa.fr">
             </fieldset><br>
@@ -56,12 +57,12 @@
             </fieldset><br>
             <label><input type="checkbox" name="cgu">*j'accept le traitement informatique de ce formulaire</label><br>
             <br>
-            <input type="submit" value="Envoyer">
-            <input type="submit" value="Annuler"><br>
+            <input type="submit" id="bouton-envoi" value="Envoyer">
+            <input type="submit" id="resest" value="Annuler"><br>
             <br>
             
           </form>
-          <script src="validation.js"></script>
+          
           <hr>
          
           <ul>
@@ -69,5 +70,6 @@
            <li><a href="horaires.html" title="voir les horaires">Horaires</a></li><br>
            <li> <a href="plan du site.html" title="voir le plan du site">Plan du site</a></li><br>
           </ul>
+          
                 </body>
                 </html>

@@ -22,40 +22,44 @@
                 <body>
                     <h2>Contact</h2>
                     <hr>
-                    *Ces zones sont obligatoire
+                   <h1><span class="asterisk">*Ces zones sont obligatoire</h1>
           <form action="http://bienvu.net/script.php" method="post">  
             <fieldset>
             <legend>Vos coordonnées</legend>
-            <label for="user-name">Votre nom*:</label>
-            <input type="text" id="user-name"><br>
-            <label for="user-name">Votre prénom*</label>
-            <input type="text" id="user-name"><br>
+            <label for="nom">Votre nom:<span class="asterisk">*</label>
+            <input type="text" id="nom"required minlength="1"><br>
+            <span class="error-message" id="nom-error"></span>
+            <label for="prénom">Votre prénom<span class="asterisk">*</label>
+            <input type="text" id="prénom"required minlength="1"><br>
+            <span class="error-message" id="prénom-error"></span>
             <br>
-            Sexe*
-            <label><input type="radio" name="gender" value="female">Féminin</label>
-            <label><input type="radio" name="gender" value="male">Masculin</label><br>
+            <p>sexe*</p>
+            <label><input type="radio" name="gender" value="Féminin">Féminin</label>
+            <label><input type="radio" name="gender" value="Masculin">Masculin</label><br>
             
-            <label for="date">Date de naissanve*</label>
+            <label for="date">Date de naissanve<span class="asterisk">*</label>
             <input type="date" name="ddn" id="date"><br>
-            <label for="user-code">Code postal*:</label>
-            <input type="text" id="user-code"><br>
+            <label for="codepostal">Code postal:<span class="asterisk">*</label>
+            <input type="text" id="codepostal"pattern="[0-9]{5}" required><br>
+            <span class="error-message" id="codepostal-error"></span>
             <label for="Adresse">Adresse:</label>
             <input type="text" id="Adresse"><br>
-            <label for="city">Ville:</label>
-            <input type="text" id="city"><br>
-            <label for="emailinput">Email*:</label>
-            <input type="text" name="eamil" id="emailinput" value="dave.loper@afpa.fr">
+            <label for="Ville">Ville:</label>
+            <input type="text" id="ville"><br>
+            <label for="emailinput">Email:<span class="asterisk">*</label>
+            <input type="text" name="eamil"required minlength="1" id="emailinput" value="dave.loper@afpa.fr">
+            <span class="error-message" id="email-error"></span>
             </fieldset><br>
             <fieldset>
             <legend>Votre demande</legend>
-            <label id="sujet">Sujet*:</label>
+            <label id="sujet">Sujet:<span class="asterisk">*</label>
             <select name="sujet" id="sujet">
                <option value="choiser">veuillez séléctionner un sujet</option>
             </select><br>
-            <label for="message">Votre question*:</label>
+            <label for="message">Votre question:<span class="asterisk">*</label>
             <textarea name="message" id="message" cols="20"></textarea>
             </fieldset><br>
-            <label><input type="checkbox" name="cgu">*j'accept le traitement informatique de ce formulaire</label><br>
+            <label><input type="checkbox" name="cgu">j'accept le traitement informatique de ce formulaire<span class="asterisk">*</label><br>
             <br>
             <input type="submit" value="Envoyer">
             <input type="submit" value="Annuler"><br>
@@ -69,5 +73,6 @@
            <a href="horaires.html" title="voir les horaires">Horaires</a>
            <a href="plan du site.html" title="voir le plan du site">Plan du site</a>
           </div>
+          <script src="vad.js"></script>
                 </body>
                 </html>
